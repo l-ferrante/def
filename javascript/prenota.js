@@ -222,12 +222,12 @@ const CONCERTI={
 
 const SETTORI={
     "Seleziona un settore":"",
-    "Settore blu +5€ a persona":5,
-    "Settore viola +10€ a persona":10,
-    "Settore giallo +5€ a persona":5,
-    "Settore verde +10€ a persona":10,
-    "Settore rosso +15€ a persona":15,
-    "Settore arancione +10€ a persona":10
+    "Settore blu +€5 a persona":5,
+    "Settore viola +€10 a persona":10,
+    "Settore giallo +€5 a persona":5,
+    "Settore verde +€10 a persona":10,
+    "Settore rosso +€15 a persona":15,
+    "Settore arancione +€10 a persona":10
 }
 
         /*nel gestoreLoad sono inizializzate tutte le variabili globali definite immediatamente sopra.
