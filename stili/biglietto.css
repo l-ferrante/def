@@ -41,6 +41,10 @@ p{
     background-color: #63BFBA;
 }
 
+#stampa:hover{
+    filter: brightness(90%);
+}
+
 #stampa img{
     width: 40%;
 }

@@ -44,6 +44,7 @@ function gestoreLoad(){
         stringa=stringa.replace(/[=+%]/g, " ");
         stringa=stringa.replace(/2B/g, "+");
         stringa=stringa.replace(/E2 82 AC/g, "€");
+        stringa=stringa.replace(/3A/g, ":");
         let info=document.createElement("li");
         let testo=document.createTextNode(stringa);
         info.appendChild(testo);
