@@ -115,12 +115,12 @@ function azzeraDati(){
     try{
         let nomi_nuovi=document.getElementsByClassName("nome_nuovo");
         let cognomi_nuovi=document.getElementsByClassName("cognome_nuovo");
-        let contenitore_nuovo=document.getElementsByClassName("contenitore_nuovo");
+        let contenitori_nuovi=document.getElementsByClassName("contenitore_nuovo");
 
-        while((nomi_nuovi.length)!=0 && (cognomi_nuovi.length)!=0 && (contenitore_nuovo.length)!=0){
+        while((nomi_nuovi.length)!=0 && (cognomi_nuovi.length)!=0 && (contenitori_nuovi.length)!=0){
             nomi_nuovi[nomi_nuovi.length-1].remove();
             cognomi_nuovi[cognomi_nuovi.length-1].remove();
-            contenitore_nuovo[contenitore_nuovo.length-1].remove();
+            contenitori_nuovi[contenitori_nuovi.length-1].remove();
         }
 
         gestoreDati();
@@ -133,7 +133,7 @@ function azzeraDati(){
 //Genera ulteriori campi di testo per l'inserimento dei dati degli acquirenti, in numero pari ai biglietti richiesti
 function gestoreDati(){
     try{
-        let n = nodoN_biglietti.value;
+        let n=nodoN_biglietti.value;
         if(n<=0){
             alert("Attenzione! Selezionare un valore maggiore di 0");
             nodoN_biglietti.value=1;
@@ -172,6 +172,10 @@ function gestoreDati(){
                 nodoDati.appendChild(contenitore);
                 nodoDati.appendChild(nuovoNome);
                 nodoDati.appendChild(nuovoCognome);
+            }
+            if(n!=1){
+                nodoNome.name="Nome 1:";
+                nodoCognome.name="Cognome 1:";
             }
         }
         gestorePrezzo();
@@ -258,6 +262,8 @@ const SETTORI={
                 nodoP_1.checked=true;
                 nodoNome.value="";
                 nodoCognome.value="";
+                nodoNome.name="Nome:";
+                nodoCognome.name="Cognome:";
                 nodoN_carta.value="";
                 nodoN_biglietti.value=1;
                 nodoPrezzo.value="";
