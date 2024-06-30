@@ -38,6 +38,7 @@ p{
 
 #stampa{
     margin: 0 0 0 80%;
+    background-color: #63BFBA;
 }
 
 #stampa img{
@@ -50,7 +51,7 @@ p{
 
 #indietro img{
     width: 6%;
-    background-color: #e9e9ed;
+    background-color: #63BFBA;
     border: gray 1px solid;
     border-radius: 6px;
 }
