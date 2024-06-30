@@ -144,14 +144,14 @@ function gestoreDati(){
                 nuovoNome.setAttribute("required", "");
                 nuovoNome.setAttribute("placeholder", "Nome");
                 nuovoNome.setAttribute("class", "nome_nuovo");
-                nuovoNome.setAttribute("name", "Nome" + i);
+                nuovoNome.setAttribute("name", "Nome " + i+": ");
 
                 let nuovoCognome = document.createElement("input");
                 nuovoCognome.setAttribute("id", "cognome" + i);
                 nuovoCognome.setAttribute("required", "");
                 nuovoCognome.setAttribute("placeholder", "Cognome");
                 nuovoCognome.setAttribute("class", "cognome_nuovo");
-                nuovoCognome.setAttribute("name", "Cognome" + i);
+                nuovoCognome.setAttribute("name", "Cognome " + i+": ");
 
                 nodoDati.appendChild(contenitore);
                 nodoDati.appendChild(nuovoNome);
