@@ -1,0 +1,60 @@
+#griglia{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+#about{
+    grid-row: 2/3;
+    padding: 1% 10% 2% 10%;
+}
+
+#about h1{
+    font-size: 225%;
+}
+
+#about p{
+    font-size: 180%;
+}
+
+#about a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+#about a:visited{
+    color: darkviolet;
+}
+
+#about a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+pre{
+    padding: 3%;
+    background-color: black;
+    color: green;
+    font-size: 180%;
+}
+
+.no{
+    list-style-type: none;
+}
+
+#contenitore2{
+    text-align: center;
+}
+
+.w3c{
+    width: 15%;
+    padding: 0 3% 0 3%;
+}
+
+.freccia{
+    width: 2.5%;
+}
+
+footer{
+    grid-row: 3/4;
+}
