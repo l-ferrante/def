@@ -1,3 +1,40 @@
+//Gestisce la visualizzazione di #menu2, il menu nascosto che appare su schermi piccoli, da 300 a 619px
+function gestoreApri_Menu(){
+    try{
+        if(visualizzato==false){
+            nodoMenu2.style.opacity = "1";
+            nodoMenu2.style.visibility = "visible";
+            visualizzato=true;
+        } else{
+            nodoMenu2.style.opacity = "0";
+            nodoMenu2.style.visibility = "hidden";
+            visualizzato=false;
+        }
+    } catch(e){
+        alert("gestoreApri_Menu "+e);
+    }
+}
+
+
+/*La funzione gestisce l'apparizione dell'elemento #freccia_su, che dalla parte inferiore
+ della pagina riporta in cima. L'animazione sfrutta l'effetto opacity. L'opacità è impostata su 0 in CSS
+ e qui viene riportata a 1 (e dunque la freccia diventa visibile) solo quando lo scroll della pagina
+ supera i 500 pixel */
+ function gestoreFreccia(){ 
+    try{
+        freccia.style.transition="opacity 0.2s";
+        if (document.documentElement.scrollTop>500) {
+        freccia.style.opacity="1";
+        } else {
+        freccia.style.opacity="0";
+        }
+    } catch (e){
+        alert("gestoreFreccia "+e)
+    }
+    
+}
+
+
 /*La funzione gestisce le animazioni delle immagini dell'auto e del bus:
 l'auto compie l'animazione dopo uno scrolling di 50px, il bus dopo 150.
 Inoltre la funzione gestisce le animazioni delle immagini del parcheggio e dell'icona del palco. */
@@ -17,36 +54,6 @@ function gestoreMovimento(){
     
 }
 
-/*La funzione gestisce l'apparizione dell'elemento #freccia_su, che dalla parte inferiore
- della pagina riporta in cima. L'animazione sfrutta l'effetto opacity. L'opacità è impostata su 0 in CSS
- e qui viene riportata a 1 (e dunque la freccia diventa visibile) solo quando lo scroll della pagina
- supera i 500 pixel */
-function gestoreFreccia(){ 
-    try{
-        freccia.style.transition="opacity 0.2s";
-        if (document.documentElement.scrollTop>500) {
-        freccia.style.opacity="1";
-        } else {
-        freccia.style.opacity="0";
-        }
-    } catch (e){
-        alert("gestoreFreccia "+e)
-    }
-    
-}
-
-/*Gestisce la visualizzazione di #menu2, il menu nascosto che appare su schermi piccoli, da 300 a 619px*/
-function gestoreApri_Menu(){
-    if(visualizzato==false){
-        nodoMenu2.style.opacity = "1";
-        nodoMenu2.style.visibility = "visible";
-        visualizzato=true;
-    } else{
-        nodoMenu2.style.opacity = "0";
-        nodoMenu2.style.visibility = "hidden";
-        visualizzato=false;
-    }
-}
 
 // La funzione gestisce "l'evidenziazione" dei contatti nel footer dopo il clic del link #contattare
 function gestoreContattare(){

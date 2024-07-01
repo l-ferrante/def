@@ -1,20 +1,3 @@
-/*La funzione gestisce l'apparizione dell'elemento freccia_su, che dalla parte inferiore
- della pagina riporta in cima, per mezzo dell'effetto opacity. L'opacità è impostata su 0 in CSS
- e qui viene riportata a 1 (e dunque la freccia diventa visibile) solo quando lo scroll della pagina
- supera i 500 pixel.*/
-function gestoreFreccia(){ 
-    try{
-        freccia.style.transition="opacity 0.2s";
-        if (document.documentElement.scrollTop > 500) {
-        freccia.style.opacity="1";
-        } else {
-        freccia.style.opacity="0";
-        }
-    } catch (e){
-        alert("gestoreFreccia "+e);
-    }
-}
-
 //Gestisce la visualizzazione di #menu2, il menu nascosto che appare su schermi piccoli, da 300 a 619px
 function gestoreApri_Menu(){
     try{
@@ -31,6 +14,24 @@ function gestoreApri_Menu(){
         alert("gestoreApri_Menu "+e);
     }
 }
+
+/*La funzione gestisce l'apparizione dell'elemento freccia_su, che dalla parte inferiore
+ della pagina riporta in cima, per mezzo dell'effetto opacity. L'opacità è impostata su 0 in CSS
+ e qui viene riportata a 1 (e dunque la freccia diventa visibile) solo quando lo scroll della pagina
+ supera i 500 pixel.*/
+ function gestoreFreccia(){ 
+    try{
+        freccia.style.transition="opacity 0.2s";
+        if (document.documentElement.scrollTop > 500) {
+        freccia.style.opacity="1";
+        } else {
+        freccia.style.opacity="0";
+        }
+    } catch (e){
+        alert("gestoreFreccia "+e);
+    }
+}
+
 
 //Genera dinamicamente le option del select #concerti
 /**/        function creaSelect (nodoSelect, opzioni){

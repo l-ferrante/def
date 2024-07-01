@@ -1,13 +1,17 @@
-/*Gestisce la visualizzazione di #menu2, il menu nascosto che appare su schermi piccoli, da 400 a 619px*/
+//Gestisce la visualizzazione di #menu2, il menu nascosto che appare su schermi piccoli, da 300 a 619px
 function gestoreApri_Menu(){
-    if(visualizzato==false){
-        nodoMenu2.style.opacity = "1";
-        nodoMenu2.style.visibility = "visible";
-        visualizzato=true;
-    } else{
-        nodoMenu2.style.opacity = "0";
-        nodoMenu2.style.visibility = "hidden";
-        visualizzato=false;
+    try{
+        if(visualizzato==false){
+            nodoMenu2.style.opacity = "1";
+            nodoMenu2.style.visibility = "visible";
+            visualizzato=true;
+        } else{
+            nodoMenu2.style.opacity = "0";
+            nodoMenu2.style.visibility = "hidden";
+            visualizzato=false;
+        }
+    } catch(e){
+        alert("gestoreApri_Menu "+e);
     }
 }
 

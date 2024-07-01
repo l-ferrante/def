@@ -15,7 +15,6 @@ function gestoreApri_Menu(){
     }
 }
 
-
 /*La funzione gestisce l'apparizione dell'elemento freccia_su, che dalla parte inferiore
  della pagina riporta in cima, per mezzo dell'effetto opacity. L'opacità è impostata su 0 in CSS
  e qui viene riportata a 1 (e dunque la freccia diventa visibile) solo quando lo scroll della pagina
